@@ -1,5 +1,5 @@
 import { useEffect, useState, useReducer, useRef } from 'react';
-import axios from '../../config/config';
+import axios from '../../config/apiConfig';
 import { FETCH_INIT, FETCH_SUCCESS, FETCH_FAILURE } from '../types';
 
 function fetchDataReducer(state, action) {
@@ -47,7 +47,9 @@ export default function useData(urlPath, initialParams, initialData) {
       } else {
         dispatch({ type: FETCH_INIT });
         try {
-          const res = await axios(urlPath, { params });
+          const res = await axios.get(urlPath, {
+            params,
+          });
           // console.log('HOOK RES', res);
           dispatch({ type: FETCH_SUCCESS, payload: res.data });
         } catch (err) {

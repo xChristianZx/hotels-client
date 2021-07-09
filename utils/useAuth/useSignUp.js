@@ -1,7 +1,7 @@
 import { useState, useReducer } from 'react';
-import { FETCH_INIT, FETCH_FAILURE, FETCH_SUCCESS } from '../types';
-import axios from '../../config/config';
 import { useRouter } from 'next/router';
+import axios from '../../config/apiConfig';
+import { FETCH_INIT, FETCH_FAILURE, FETCH_SUCCESS } from '../types';
 
 function fetchSignUpReducer(state, action) {
   switch (action.type) {

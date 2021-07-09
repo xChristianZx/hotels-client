@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import axios from '../../config/config';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getSession } from 'next-auth/client';
+import axios from '../../config/apiConfig';
 import { trimHotelName } from '../../utils/helper';
 import SearchBar from '../../components/searchbar/SearchBar';
 import RoomTypeItem from '../../components/hotels/RoomTypeItem';

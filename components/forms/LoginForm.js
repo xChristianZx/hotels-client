@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import axios from '../../config/config';
+import axios from '../../config/apiConfig';
 
 const loginSchema = yup.object().shape({
   email: yup

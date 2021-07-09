@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getSession } from 'next-auth/client';
-import axios from '../../config/config';
+import axios from '../../config/apiConfig';
 import HotelItem from '../../components/hotels/HotelItem';
 import SearchBar from '../../components/searchbar/SearchBar';
 import useData from '../../utils/useData/useData';

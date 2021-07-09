@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
-import axios from '../../../config/config';
+import axios from '../../../config/apiConfig';
 
 const axiosInstance = axios.create({
   withCredentials: true,
