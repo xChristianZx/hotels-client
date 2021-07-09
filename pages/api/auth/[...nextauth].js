@@ -20,7 +20,7 @@ const providers = [
           return data;
         }
       } catch (e) {
-        const errorMessage = e.response.data.message;
+        const errorMessage = e.response.data.errors[0].message;
         console.log('NextAuth SignUp Error', e.response.data);
         // https://next-auth.js.org/providers/credentials#example
         throw `/auth/signup?error=${errorMessage}&callbackUrl=${req.body.callbackUrl}`;
@@ -43,7 +43,7 @@ const providers = [
         }
       } catch (e) {
         // Redirecting to the login page with error message and persisting callback in the URL
-        const errorMessage = e.response.data.message;
+        const errorMessage = e.response.data.errors[0].message;
         console.log('NextAuth Login Error', e.response.data);
         throw `/auth/login?error=${errorMessage}&callbackUrl=${req.body.callbackUrl}`;
       }
