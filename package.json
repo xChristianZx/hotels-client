@@ -13,7 +13,7 @@
     "@tailwindcss/forms": "^0.2.1",
     "axios": "^0.21.1",
     "downshift": "^6.1.2",
-    "luxon": "^1.26.0",
+    "luxon": "^3.2.1",
     "next": "^12.1.0",
     "next-auth": "^3.27.0",
     "qs": "^6.10.1",
